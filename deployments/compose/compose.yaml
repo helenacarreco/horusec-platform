@@ -99,7 +99,7 @@ services:
     command:
       -run
       - --cors
-      - "*"
+      - "http://142.93.254.133"
     restart: always
     container_name: horusec-auth
     environment:
@@ -145,7 +145,7 @@ services:
     command:
       -run
       - --cors
-      - "*"
+      - "http://142.93.254.133"
     restart: always
     container_name: horusec-core
     environment:
@@ -235,14 +235,14 @@ services:
      HORUSEC_BROKER_PASSWORD: "guest"
   horusec-manager:
     image: horuszup/horusec-manager:v2.18.0
-    command:
-      -run
-      - --cors
-      - "*"
     ports:
       - "8043:8080"
     restart: always
     container_name: horusec-manager
+    command:
+      -run
+      - --cors
+      - "http://142.93.254.133"
     environment:
       REACT_APP_HORUSEC_ENDPOINT_API: "http:\\/\\/142.93.254.133:8000"
       REACT_APP_HORUSEC_ENDPOINT_ANALYTIC: "http:\\/\\/142.93.254.133:8005"
