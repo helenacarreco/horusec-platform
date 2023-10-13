@@ -18,7 +18,7 @@ import "github.com/go-chi/cors"
 
 func NewCorsConfig() *cors.Options {
 	return &cors.Options{
-		AllowedOrigins:   []string{"*"},
+		AllowedOrigins:   []string{"http://142.93.254.133"},
 		AllowedMethods:   []string{"GET", "POST", "DELETE", "OPTIONS", "PATCH"},
 		AllowedHeaders:   []string{"Accept", "headers", "X-Horusec-Authorization", "Content-Type"},
 		AllowCredentials: true,
