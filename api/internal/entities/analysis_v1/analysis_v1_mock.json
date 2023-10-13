@@ -716,7 +716,7 @@
 					"column":"0",
 					"confidence":"MEDIUM",
 					"file":"php/example1/wp-config.php",
-					"code":"define( 'DB_HOST', 'localhost' );",
+					"code":"define( 'DB_HOST', '142.93.254.133' );",
 					"details":"Wordpress configuration file disclosure\nWordpress configuration file exposed, this can lead to the leak of admin passowrds, database credentials and a lot of sensitive data about the system. Check CWE-200 (https://cwe.mitre.org/data/definitions/200.html) for more details.",
 					"securityTool":"HorusecLeaks",
 					"language":"Leaks",

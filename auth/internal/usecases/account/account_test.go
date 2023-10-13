@@ -242,7 +242,7 @@ func TestNewAccountValidationEmail(t *testing.T) {
 		assert.NotPanics(t, func() {
 			data := email.Data.(map[string]interface{})
 
-			assert.Equal(t, "http://localhost:8006/auth/account/validate/"+
+			assert.Equal(t, "http://142.93.254.133:8006/auth/account/validate/"+
 				"00000000-0000-0000-0000-000000000000", data["URL"])
 			assert.Equal(t, "test", data["Username"])
 
@@ -312,7 +312,7 @@ func TestNewResetPasswordCodeEmail(t *testing.T) {
 		assert.NotPanics(t, func() {
 			data := email.Data.(map[string]interface{})
 
-			assert.Equal(t, "http://localhost:8043/auth/recovery-password/"+
+			assert.Equal(t, "http://142.93.254.133:8043/auth/recovery-password/"+
 				"check-code?email=test@test.com&code=123456", data["URL"])
 			assert.Equal(t, "test", data["Username"])
 			assert.Equal(t, "123456", data["Code"])

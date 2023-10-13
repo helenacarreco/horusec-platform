@@ -59,6 +59,6 @@ sleep 5
 
 sleep 3
 
-echo HORUSEC WEB IS UP AND CAN BE ACCESSED IN '-> http://localhost:8043/auth' &
+echo HORUSEC WEB IS UP AND CAN BE ACCESSED IN '-> http://142.93.254.133:8043/auth' &
 
 nginx -g "daemon off;"

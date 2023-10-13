@@ -1637,7 +1637,7 @@ e555d9a1-f1f9-48cc-81a7-91b13bdd8456	t	f	broker	0	f	34db8607-8297-4dd0-a692-dbc2
 e40c0b19-fe91-4c61-84c0-51693f8f5286	t	f	security-admin-console	0	t	6985b977-2c5f-44c5-9f09-0282f9426c7e	/admin/master/console/	f	\N	f	master	openid-connect	0	f	f	${client_security-admin-console}	f	client-secret	${authAdminUrl}	\N	\N	t	f	f	f
 90e77f11-cc38-4db9-b9a0-ac8aa6c17763	t	f	admin-cli	0	t	f6c8ab22-5ecf-4b0a-a8b6-87dc5dfb19e4	\N	f	\N	f	master	openid-connect	0	f	f	${client_admin-cli}	f	client-secret	\N	\N	\N	f	f	t	f
 b687b7a4-3fb7-43e1-a464-4caedefe67d3	t	t	horusec-private	0	f	f00907ba-87b7-441b-aae7-bd4c74de1938	\N	f		f	master	openid-connect	-1	f	f	horusec-private	t	client-secret		\N	\N	t	t	t	f
-6f3f6a95-f7ab-458b-8d51-c4829502b58c	t	t	horusec-public	0	t	5a20abb1-fe39-41b5-b894-14ae5a43538a	\N	f	http://localhost:8043	f	master	openid-connect	-1	f	f	horusec-public	f	client-secret	http://localhost:8043	\N	\N	t	f	t	f
+6f3f6a95-f7ab-458b-8d51-c4829502b58c	t	t	horusec-public	0	t	5a20abb1-fe39-41b5-b894-14ae5a43538a	\N	f	http://142.93.254.133:8043	f	master	openid-connect	-1	f	f	horusec-public	f	client-secret	http://142.93.254.133:8043	\N	\N	t	f	t	f
 \.
 
 
@@ -2690,7 +2690,7 @@ COPY public.redirect_uris (client_id, value) FROM stdin;
 9d6673da-220b-40fa-a6b6-df8c81d4fd4f	/realms/master/account/*
 e40c0b19-fe91-4c61-84c0-51693f8f5286	/admin/master/console/*
 b687b7a4-3fb7-43e1-a464-4caedefe67d3	*
-6f3f6a95-f7ab-458b-8d51-c4829502b58c	http://localhost:8043/*
+6f3f6a95-f7ab-458b-8d51-c4829502b58c	http://142.93.254.133:8043/*
 6f3f6a95-f7ab-458b-8d51-c4829502b58c	http://142.93.254.133:8043/*
 \.
 
@@ -2958,7 +2958,7 @@ COPY public.username_login_failure (realm_id, username, failed_login_not_before,
 COPY public.web_origins (client_id, value) FROM stdin;
 e40c0b19-fe91-4c61-84c0-51693f8f5286	+
 b687b7a4-3fb7-43e1-a464-4caedefe67d3	*
-6f3f6a95-f7ab-458b-8d51-c4829502b58c	http://localhost:8043
+6f3f6a95-f7ab-458b-8d51-c4829502b58c	http://142.93.254.133:8043
 6f3f6a95-f7ab-458b-8d51-c4829502b58c	http://142.93.254.133:8043
 \.
 

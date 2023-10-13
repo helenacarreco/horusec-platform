@@ -41,7 +41,7 @@ describe("Horusec tests", () => {
 });
 
 function LoginWithDefaultAccountAndCheckIfNotExistWorkspace(): void {
-    cy.visit("http://localhost:8043/auth");
+    cy.visit("http://142.93.254.133:8043/auth");
     cy.wait(10000);
 
     // Login with default account
@@ -546,5 +546,5 @@ function LoginAndUpdateDeleteAccount(): void {
     cy.wait(1500);
 
     // Check if login is not authorized
-    cy.url().should("eq", "http://localhost:8043/auth");
+    cy.url().should("eq", "http://142.93.254.133:8043/auth");
 }

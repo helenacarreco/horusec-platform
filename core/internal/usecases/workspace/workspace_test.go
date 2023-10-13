@@ -136,7 +136,7 @@ func TestNewOrganizationInviteEmail(t *testing.T) {
 
 			assert.Equal(t, "test", data["WorkspaceName"])
 			assert.Equal(t, "test", data["Username"])
-			assert.Equal(t, "http://localhost:8043", data["URL"])
+			assert.Equal(t, "http://142.93.254.133:8043", data["URL"])
 		})
 	})
 }

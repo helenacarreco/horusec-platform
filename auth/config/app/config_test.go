@@ -38,13 +38,13 @@ func getMockedConnection() *database.Connection {
 }
 
 func setDefaultEnvs() {
-	_ = os.Setenv(enums.EnvAuthURL, "http://localhost:8006")
+	_ = os.Setenv(enums.EnvAuthURL, "http://142.93.254.133:8006")
 	_ = os.Setenv(enums.EnvAuthType, auth.Horusec.ToString())
 	_ = os.Setenv(enums.EnvDisableEmails, "false")
 	_ = os.Setenv(enums.EnvEnableApplicationAdmin, "false")
 	_ = os.Setenv(enums.EnvApplicationAdminData, enums.ApplicationAdminDefaultData)
 	_ = os.Setenv(enums.EnvDefaultUserData, enums.DefaultUserData)
-	_ = os.Setenv(enums.EnvHorusecManager, "http://localhost:8043")
+	_ = os.Setenv(enums.EnvHorusecManager, "http://142.93.254.133:8043")
 }
 
 func TestNewAuthAppConfig(t *testing.T) {
@@ -272,7 +272,7 @@ func TestGetHorusecAuthURL(t *testing.T) {
 	t.Run("should success get auth url", func(t *testing.T) {
 		appConfig := NewAuthAppConfig(getMockedConnection())
 
-		assert.Equal(t, "http://localhost:8006", appConfig.GetHorusecAuthURL())
+		assert.Equal(t, "http://142.93.254.133:8006", appConfig.GetHorusecAuthURL())
 	})
 }
 
@@ -280,7 +280,7 @@ func TestGetHorusecManagerURL(t *testing.T) {
 	t.Run("should success get manager url", func(t *testing.T) {
 		appConfig := NewAuthAppConfig(getMockedConnection())
 
-		assert.Equal(t, "http://localhost:8043", appConfig.GetHorusecManagerURL())
+		assert.Equal(t, "http://142.93.254.133:8043", appConfig.GetHorusecManagerURL())
 	})
 }
 

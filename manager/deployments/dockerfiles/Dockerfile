@@ -18,7 +18,7 @@ COPY . /manager
 
 WORKDIR /manager
 
-ENV NO_PROXY=localhost
+ENV NO_PROXY=142.93.254.133
 ENV NODE_TLS_REJECT_UNAUTHORIZED=0
 RUN yarn config set registry http://registry.yarnpkg.com
 
