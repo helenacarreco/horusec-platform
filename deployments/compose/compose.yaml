@@ -96,10 +96,6 @@ services:
     depends_on:
       - "rabbit"
       - "horusec_postgresql"
-    command:
-      -run
-      - --cors
-      - "http://142.93.254.133"
     restart: always
     container_name: horusec-auth
     environment:
@@ -142,10 +138,6 @@ services:
       - "rabbit"
       - "horusec_postgresql"
       - "horusec-auth"
-    command:
-      -run
-      - --cors
-      - "http://142.93.254.133"
     restart: always
     container_name: horusec-core
     environment:
@@ -239,10 +231,6 @@ services:
       - "8043:8080"
     restart: always
     container_name: horusec-manager
-    command:
-      -run
-      - --cors
-      - "http://142.93.254.133"
     environment:
       REACT_APP_HORUSEC_ENDPOINT_API: "http:\\/\\/142.93.254.133:8000"
       REACT_APP_HORUSEC_ENDPOINT_ANALYTIC: "http:\\/\\/142.93.254.133:8005"
