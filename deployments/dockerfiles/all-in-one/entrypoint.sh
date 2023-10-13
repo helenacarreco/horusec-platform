@@ -38,12 +38,12 @@ sleep 3
 docker run -v "$(pwd)/migrations/source/platform:/migrations" \
        --network host migrate/migrate \
        -path=/migrations/ \
-       -database postgresql://root:root@127.0.0.1:5432/horusec_db?sslmode=disable up
+       -database postgresql://root:root@142.93.254.133:5432/horusec_db?sslmode=disable up
 
 docker run -v "$(pwd)/migrations/source/analytic:/migrations" \
        --network host migrate/migrate \
        -path=/migrations/ \
-       -database postgresql://root:root@127.0.0.1:5432/horusec_analytic_db?sslmode=disable up
+       -database postgresql://root:root@142.93.254.133:5432/horusec_analytic_db?sslmode=disable up
 
 sleep 2
 

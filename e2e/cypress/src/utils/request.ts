@@ -26,7 +26,7 @@ export interface IServices {
 }
 
 export class Requests {
-    public baseURL = "http://127.0.0.1";
+    public baseURL = "http://142.93.254.133";
     public services: IServices = {
         Auth: ":8006",
         Api: ":8000",

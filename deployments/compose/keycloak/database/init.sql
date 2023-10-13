@@ -2691,7 +2691,7 @@ COPY public.redirect_uris (client_id, value) FROM stdin;
 e40c0b19-fe91-4c61-84c0-51693f8f5286	/admin/master/console/*
 b687b7a4-3fb7-43e1-a464-4caedefe67d3	*
 6f3f6a95-f7ab-458b-8d51-c4829502b58c	http://localhost:8043/*
-6f3f6a95-f7ab-458b-8d51-c4829502b58c	http://127.0.0.1:8043/*
+6f3f6a95-f7ab-458b-8d51-c4829502b58c	http://142.93.254.133:8043/*
 \.
 
 
@@ -2959,7 +2959,7 @@ COPY public.web_origins (client_id, value) FROM stdin;
 e40c0b19-fe91-4c61-84c0-51693f8f5286	+
 b687b7a4-3fb7-43e1-a464-4caedefe67d3	*
 6f3f6a95-f7ab-458b-8d51-c4829502b58c	http://localhost:8043
-6f3f6a95-f7ab-458b-8d51-c4829502b58c	http://127.0.0.1:8043
+6f3f6a95-f7ab-458b-8d51-c4829502b58c	http://142.93.254.133:8043
 \.
 
 
