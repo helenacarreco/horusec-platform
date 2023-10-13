@@ -96,6 +96,10 @@ services:
     depends_on:
       - "rabbit"
       - "horusec_postgresql"
+    command:
+      -run
+      - --cors
+      - "142.93.254.133"
     restart: always
     container_name: horusec-auth
     environment:
