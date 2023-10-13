@@ -38,27 +38,27 @@ declare global {
 const SERVICE_VULNERABILITY =
   window.HORUSEC_ENDPOINT_VULNERABILITY ||
   window.REACT_APP_HORUSEC_ENDPOINT_VULNERABILITY ||
-  '142.93.254.133:8001';
+  'http://142.93.254.133:8001';
 
 const SERVICE_CORE =
   window.HORUSEC_ENDPOINT_CORE ||
   window.REACT_APP_HORUSEC_ENDPOINT_CORE ||
-  '142.93.254.133:8003';
+  'http://142.93.254.133:8003';
 
 const SERVICE_WEBHOOK =
   window.HORUSEC_ENDPOINT_WEBHOOK ||
   window.REACT_APP_HORUSEC_ENDPOINT_WEBHOOK ||
-  '142.93.254.133:8004';
+  'http://142.93.254.133:8004';
 
 const SERVICE_ANALYTIC =
   window.HORUSEC_ENDPOINT_ANALYTIC ||
   window.REACT_APP_HORUSEC_ENDPOINT_ANALYTIC ||
-  '142.93.254.133:8005';
+  'http://142.93.254.133:8005';
 
 const SERVICE_AUTH =
   window.HORUSEC_ENDPOINT_AUTH ||
   window.REACT_APP_HORUSEC_ENDPOINT_AUTH ||
-  '142.93.254.133:8006';
+  'http://142.93.254.133:8006';
 
 const isLocalHost = (endpoint: string) =>
   endpoint.includes('localhost') || endpoint.includes('127.0.0.1');
