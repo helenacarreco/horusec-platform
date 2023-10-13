@@ -99,7 +99,7 @@ services:
     command:
       -run
       - --cors
-      - "142.93.254.133"
+      - "*"
     restart: always
     container_name: horusec-auth
     environment:
@@ -142,6 +142,10 @@ services:
       - "rabbit"
       - "horusec_postgresql"
       - "horusec-auth"
+    command:
+      -run
+      - --cors
+      - "*"
     restart: always
     container_name: horusec-core
     environment:
@@ -231,6 +235,10 @@ services:
      HORUSEC_BROKER_PASSWORD: "guest"
   horusec-manager:
     image: horuszup/horusec-manager:v2.18.0
+    command:
+      -run
+      - --cors
+      - "*"
     ports:
       - "8043:8080"
     restart: always
