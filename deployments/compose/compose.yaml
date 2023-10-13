@@ -128,8 +128,8 @@ services:
       HORUSEC_BROKER_USERNAME: "guest" # Sensitive information we not recommended usage in production environment, change for usage strong data for connection with this service
       HORUSEC_BROKER_PASSWORD: "guest" # Sensitive information we not recommended usage in production environment, change for usage strong data for connection with this service
       HORUSEC_DISABLE_EMAILS: "true"
-      HORUSEC_AUTH_URL: "127.0.0.1:8006"
-      HORUSEC_MANAGER_URL: "127.0.0.1:8043"
+      HORUSEC_AUTH_URL: "http://142.93.254.133:8006"
+      HORUSEC_MANAGER_URL: "http://142.93.254.133:8043"
   horusec-core:
     image: horuszup/horusec-core:v2.18.0
     ports:
@@ -150,7 +150,7 @@ services:
       HORUSEC_DATABASE_SQL_URI: "postgresql://root:root@horusec_postgresql:5432/horusec_db?sslmode=disable" # Sensitive information we not recommended usage in production environment, change for usage strong data for connection with this service
       HORUSEC_DATABASE_SQL_LOG_MODE: "false"
       HORUSEC_GRPC_AUTH_URL: "horusec-auth:8007"
-      HORUSEC_MANAGER_URL: "127.0.0.1:8043"
+      HORUSEC_MANAGER_URL: "http://142.93.254.133:8043"
   horusec-analytic:
     image: horuszup/horusec-analytic:v2.18.0
     ports:
@@ -232,12 +232,12 @@ services:
     restart: always
     container_name: horusec-manager
     environment:
-      HORUSEC_ENDPOINT_API: ${HORUSEC_ENDPOINT_API}
-      HORUSEC_ENDPOINT_ANALYTIC: ${HORUSEC_ENDPOINT_ANALYTIC}
-      HORUSEC_ENDPOINT_CORE: ${HORUSEC_ENDPOINT_CORE}
-      HORUSEC_ENDPOINT_WEBHOOK: ${HORUSEC_ENDPOINT_WEBHOOK}
-      HORUSEC_ENDPOINT_AUTH: ${HORUSEC_ENDPOINT_AUTH}
-      HORUSEC_ENDPOINT_VULNERABILITY: ${HORUSEC_ENDPOINT_VULNERABILITY}
+      REACT_APP_HORUSEC_ENDPOINT_API: "http:\\/\\/142.93.254.133:8000"
+      REACT_APP_HORUSEC_ENDPOINT_ANALYTIC: "http:\\/\\/142.93.254.133:8005"
+      REACT_APP_HORUSEC_ENDPOINT_CORE: "http:\\/\\/142.93.254.133:8003"
+      REACT_APP_HORUSEC_ENDPOINT_WEBHOOK: "http:\\/\\/142.93.254.133:8004"
+      REACT_APP_HORUSEC_ENDPOINT_AUTH: "http:\\/\\/142.93.254.133:8006"
+      REACT_APP_HORUSEC_ENDPOINT_VULNERABILITY: "http:\\/\\/142.93.254.133:8001"
       REACT_APP_HORUSEC_ENDPOINT_API: ${REACT_APP_HORUSEC_ENDPOINT_API}
       REACT_APP_HORUSEC_ENDPOINT_ANALYTIC: ${REACT_APP_HORUSEC_ENDPOINT_ANALYTIC}
       REACT_APP_HORUSEC_ENDPOINT_CORE: ${REACT_APP_HORUSEC_ENDPOINT_CORE}
